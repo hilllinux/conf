@@ -86,6 +86,8 @@ alias cls='clear'
 alias ll='ls -l'
 alias la='ls -a'
 alias vi='vim'
+alias chws='ln -s `pwd` $HOME/current_work_space'
+alias cw='cd $HOME/current_work_space'
 
 alias grep="grep --color=auto"
 alias -s html=vi   # 在命令行直接输入后缀为 html 的文件名，会在 TextMate 中打开
@@ -100,3 +102,8 @@ alias -s gz='tar -xzvf'
 alias -s tgz='tar -xzvf'
 alias -s zip='unzip'
 alias -s bz2='tar -xjvf'
+
+alias tms="tmux"
+alias tma="tmux a"
+
+export CLICOLOR=1

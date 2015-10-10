@@ -83,6 +83,9 @@ set langmenu=en
 source $VIMRUNTIME/delmenu.vim
 source $VIMRUNTIME/menu.vim
 
+" avoid paste txt affect line indent
+set nopaste
+
 " Turn on the WiLd menu
 set wildmenu
 
@@ -107,10 +110,10 @@ set hid
 set backspace=eol,start,indent
 set whichwrap+=<,>,h,l
 
-" In many terminal emulators the mouse works just fine, thus enable it.
-if has('mouse')
-  set mouse=a
-endif
+"" In many terminal emulators the mouse works just fine, thus enable it.
+"if has('mouse')
+"  set mouse=a
+"endif
 
 " Ignore case when searching
 set ignorecase
