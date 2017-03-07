@@ -9,15 +9,17 @@ SVN_PATH="http://svn.beyondin.com/test"
 RUNNING_PROJECT="$BASE_HOME/running_project"
 PROJECT_NAME=$2
 CMD=$1
+USERNAME="helloworld"
+PASSWORD="helloworld"
  
 SVN_PROJECT=$SVN_PATH/$PROJECT_NAME
 PROJECT_PATH=$BASE_HOME/$PROJECT_NAME
 
 do_switch() {
     if [ ! -d $BASE_HOME/$PROJECT_NAME ]; then
-        svn co "$SVN_PROJECT" --username wangsongqing --password 123.123. $PROJECT_PATH
+        svn co "$SVN_PROJECT" --username $USERNAME --password $PASSWORD $PROJECT_PATH
     else
-        svn up --username wangsongqing --password 123.123. $PROJECT_PATH
+        svn up --username $USERNAME --password $PASSWORD $PROJECT_PATH
     fi
 
     # svn 更新不成功
@@ -46,7 +48,7 @@ do_update() {
         echo "workspace not found"
         exit
     else
-        svn up --username wangsongqing --password 123.123. $PROJECT_PATH
+        svn up --username $USERNAME --password $PASSWORD $PROJECT_PATH
     fi
 }
 
