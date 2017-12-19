@@ -1,0 +1,10 @@
+/usr/local/openresty/nginx/logs/*.log {
+    daily
+    compress
+    rotate 7
+    delaycompress
+    sharedscripts
+    postrotate
+        kill -HUP `cat /usr/local/openresty/nginx/logs/nginx.pid`
+    endscript 
+}

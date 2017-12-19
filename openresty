@@ -19,7 +19,7 @@
 PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
 DESC="Nginx Daemon"
 NAME=nginx
-PREFIX=/usr/local/nginx
+PREFIX=/usr/local/openresty/nginx
 DAEMON=$PREFIX/sbin/$NAME
 CONF=$PREFIX/conf/$NAME.conf
 PID=$PREFIX/logs/$NAME.pid
